@@ -1,6 +1,6 @@
 {
     "name": "@hdnet/semantic-release-config",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "description": "HDNET semantic-release config, implementing HSR-20",
     "author": "HDNET",
     "type": "module",
