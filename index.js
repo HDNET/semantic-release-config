@@ -35,6 +35,7 @@ export default {
                     commitUrlFormat: '{{host}}/{{owner}}/{{repository}}/commits/{{hash}}',
                     compareUrlFormat: '{{host}}/{{owner}}/{{repository}}/compare/{{currentTag}}%0D{{previousTag}}',
                     issueUrlFormat: 'https://hdgroup.atlassian.net/browse/{{prefix}}{{id}}',
+                    issuePrefixes: ['#'],
                 },
             },
         ],
