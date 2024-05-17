@@ -79,8 +79,6 @@ const createPluginExec = () => [
   },
 ]
 
-console.log(createPluginReleaseNotesGenerator()[1].presetConfig)
-
 export default {
   branches: ['main', 'next'],
   tagFormat: '${version}',
