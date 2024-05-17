@@ -27,6 +27,13 @@ export default {
 4. Add semantic-release to your CI workflow.
 
 
+## Features
+
+* supports composer through `@iwavesmedia/semantic-release-composer` plugin
+* allows overwriting `issueUrlFormat` through the env ISSUE_URL_FORMAT
+* allows setting `issuePrefixes` (default: `#`) through the env ISSUE_PREFIX
+
+
 ## Contribute
 
 To setup current node version, you can use [nvm](https://github.com/nvm-sh/nvm)

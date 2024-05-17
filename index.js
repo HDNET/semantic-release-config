@@ -35,8 +35,8 @@ const createPluginReleaseNotesGenerator = () => [
     presetConfig: {
       commitUrlFormat: '{{host}}/{{owner}}/{{repository}}/commits/{{hash}}',
       compareUrlFormat: '{{host}}/{{owner}}/{{repository}}/compare/{{currentTag}}%0D{{previousTag}}',
-      issueUrlFormat: 'https://hdgroup.atlassian.net/browse/{{prefix}}{{id}}',
-      issuePrefixes: ['#'],
+      issueUrlFormat: `${process.env.ISSUE_URL_FORMAT ?? 'https://hdgroup.atlassian.net/browse/'}{{prefix}}{{id}}`,
+      issuePrefixes: [process.env.ISSUE_PREFIX ?? '#'],
     },
   },
 ]
@@ -78,6 +78,8 @@ const createPluginExec = () => [
     successCmd: 'echo "${nextRelease.version}" > release.properties',
   },
 ]
+
+console.log(createPluginReleaseNotesGenerator()[1].presetConfig)
 
 export default {
   branches: ['main', 'next'],
