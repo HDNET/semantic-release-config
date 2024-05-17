@@ -87,7 +87,7 @@ export default {
     createPluginCommitAnalyzer(),
     createPluginReleaseNotesGenerator(),
     createPluginChangelog(),
-    createPluginNpm(),
+    ...(existsSync('package.json') ? [createPluginNpm()] : []),
     ...(existsSync('composer.json') ? [createPluginComposer()] : []),
     createPluginGit(),
     createPluginExec(),
