@@ -55,6 +55,8 @@ const createPluginNpm = () => [
   },
 ]
 
+const createPluginComposer = () => '@iwavesmedia/semantic-release-composer'
+
 const createPluginGit = () => [
   '@semantic-release/git',
   {
@@ -86,6 +88,7 @@ export default {
     createPluginReleaseNotesGenerator(),
     createPluginChangelog(),
     createPluginNpm(),
+    ...(existsSync('composer.json') ? [createPluginComposer()] : []),
     createPluginGit(),
     createPluginExec(),
   ],
