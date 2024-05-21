@@ -55,6 +55,13 @@ const createPluginNpm = () => [
   },
 ]
 
+const createPluginYarn = () => [
+  'semantic-release-yarn',
+  {
+    npmPublish: false,
+  },
+]
+
 const createPluginComposer = () => '@iwavesmedia/semantic-release-composer'
 
 const createPluginGit = () => [
@@ -87,8 +94,9 @@ export default {
     createPluginCommitAnalyzer(),
     createPluginReleaseNotesGenerator(),
     createPluginChangelog(),
-    ...(existsSync('package.json') ? [createPluginNpm()] : []),
     ...(existsSync('composer.json') ? [createPluginComposer()] : []),
+    ...(existsSync('package-lock.json') ? [createPluginNpm()] : []),
+    ...(existsSync('yarn.lock') ? [createPluginYarn()] : []),
     createPluginGit(),
     createPluginExec(),
   ],
