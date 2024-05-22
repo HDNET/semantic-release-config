@@ -77,14 +77,11 @@ const createPluginYarn = () => [
   },
 ]
 
-const createPluginComposer = () => '@iwavesmedia/semantic-release-composer'
-
 const createPluginGit = () => [
   '@semantic-release/git',
   {
     assets: [
       'CHANGELOG.md',
-      ...appendFileIfExists('composer.json'),
       ...appendFileIfExists('package.json'),
       ...appendFileIfExists('package-lock.json'),
     ],
@@ -107,7 +104,6 @@ export default {
     createPluginCommitAnalyzer(),
     createPluginReleaseNotesGenerator(),
     createPluginChangelog(),
-    ...(existsSync('composer.json') ? [createPluginComposer()] : []),
     ...(existsSync('package-lock.json') ? [createPluginNpm()] : []),
     ...(existsSync('yarn.lock') ? [createPluginYarn()] : []),
     createPluginGit(),
