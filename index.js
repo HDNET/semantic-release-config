@@ -85,10 +85,8 @@ const createPluginGit = () => [
     assets: [
       'CHANGELOG.md',
       ...appendFileIfExists('composer.json'),
-      ...appendFileIfExists('composer.lock'),
       ...appendFileIfExists('package.json'),
       ...appendFileIfExists('package-lock.json'),
-      ...appendFileIfExists('yarn.lock'),
     ],
     message: 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
   },
