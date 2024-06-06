@@ -106,7 +106,8 @@ export default {
     createPluginReleaseNotesGenerator(),
     createPluginChangelog(),
     ...(existsSync('package-lock.json') ? [createPluginNpm()] : []),
-    ...(existsSync('yarn.lock') ? [createPluginYarn()] : []),
+    // yarn plugin needs at least yarn v2, so we check for .yarnrc.yml as indicator for yarn 2+
+    ...(existsSync('.yarnrc.yml') ? [createPluginYarn()] : []),
     createPluginGit(),
     createPluginExec(),
   ],
