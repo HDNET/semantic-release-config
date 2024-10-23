@@ -67,14 +67,14 @@ const createPluginChangelog = () => [
 const createPluginNpm = () => [
   '@semantic-release/npm',
   {
-    npmPublish: false,
+    npmPublish: process.env.PUBLISH === 'true',
   },
 ]
 
 const createPluginYarn = () => [
   'semantic-release-yarn',
   {
-    npmPublish: false,
+    npmPublish: process.env.PUBLISH === 'true',
   },
 ]
 

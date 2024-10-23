@@ -32,6 +32,7 @@ export default {
 * supports composer through `@iwavesmedia/semantic-release-composer` plugin
 * allows overwriting `issueUrlFormat` through the env ISSUE_URL_FORMAT
 * allows setting `issuePrefixes` (default: `#`) through the env ISSUE_PREFIX
+* allows publishing to a package repository when `publish` is set to `true` through `PUBLISH`
 
 
 ## Contribute
