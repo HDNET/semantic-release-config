@@ -1,33 +1,33 @@
 {
-    "name": "@hdnet/semantic-release-config",
-    "version": "3.0.1",
-    "description": "HDNET semantic-release config, implementing HSR-20",
-    "author": "HDNET",
-    "type": "module",
-    "engines": {
-        "node": ">=20"
-    },
-    "keywords": [
-        "semantic-release",
-        "hdnet",
-        "HSR"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/HDNET/semantic-release-config.git"
-    },
-    "main": "index.js",
-    "files": [
-        "index.js"
-    ],
-    "dependencies": {
-        "@semantic-release/changelog": "^6.0.3",
-        "@semantic-release/exec": "^6.0.3",
-        "@semantic-release/git": "^10.0.1",
-        "conventional-changelog-conventionalcommits": "^7.0.2",
-        "semantic-release-yarn": "^3.0.2"
-    },
-    "peerDependencies": {
-        "semantic-release": ">=23.0.0"
-    }
+  "name": "@hdnet/semantic-release-config",
+  "version": "3.1.0",
+  "description": "HDNET semantic-release config, implementing HSR-20",
+  "author": "HDNET",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "semantic-release",
+    "hdnet",
+    "HSR"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HDNET/semantic-release-config.git"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "semantic-release-yarn": "^3.0.2"
+  },
+  "peerDependencies": {
+    "semantic-release": ">=23.0.0"
+  }
 }
