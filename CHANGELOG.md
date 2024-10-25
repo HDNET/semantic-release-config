@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [3.2.0](https://bitbucket.org/hdnet/semantic-release-config/compare/3.2.0%0D3.1.1) (2024-10-25)
+
+
+### Features
+
+* Change order of changelog items and remove chores and dx from changelog ([2bee9fb](https://bitbucket.org/hdnet/semantic-release-config/commits/2bee9fba6bc8b3d8107e0101988aea7418408d52))
+
 ## [3.1.1](https://bitbucket.org/hdnet/semantic-release-config/compare/3.1.1%0D3.1.0) (2024-10-25)
 
 
