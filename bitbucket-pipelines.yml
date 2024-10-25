@@ -1,0 +1,26 @@
+image: node:22-alpine3.19
+
+definitions:
+  services:
+      docker:
+        memory: 2048
+  steps:
+    - step: &release
+        name: Release
+        caches:
+          - node
+        script:
+          - pipe: docker://hdnet/bitbucket-pipe-semantic-release:1.1.2
+            variables:
+              REPOSITORY: https://${HDNET_BOT_USERNAME}:${HDNET_BOT_KEY}@bitbucket.org/${BITBUCKET_REPO_FULL_NAME}.git
+              GIT_EMAIL: $HDNET_BOT_EMAIL
+              LOCAL_PATH: dist
+              PUBLISH: "true"
+              AWS_ACCESS_KEY_ID: $AWS_CODEARTIFACT_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_CODEARTIFACT_SECRET_ACCESS_KEY
+              AWS_REGION: $AWS_CODEARTIFACT_REGION
+
+pipelines:
+  branches:
+    main:
+      - step: *release
