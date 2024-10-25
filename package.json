@@ -12,10 +12,6 @@
     "hdnet",
     "HSR"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://bitbucket.org:hdnet/semantic-release-config.git"
-  },
   "main": "index.js",
   "files": [
     "index.js"
