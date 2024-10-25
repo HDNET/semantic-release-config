@@ -16,6 +16,9 @@
   "files": [
     "index.js"
   ],
+  "publishConfig": {
+    "registry": "https://hdnet-262788382628.d.codeartifact.eu-central-1.amazonaws.com/npm/hdnet-npm/"
+  },
   "dependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^6.0.3",
