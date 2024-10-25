@@ -37,5 +37,8 @@ export default {
 
 ## Contribute
 
-To setup current node version, you can use [nvm](https://github.com/nvm-sh/nvm)
-(in this project a [.nvmrc](./.nvmrc) file is maintained).
+To setup the correct node version, use tools like [nvm](https://github.com/nvm-sh/nvm) or [mise](https://github.com/jdx/mise). This project maintains an [.nvmrc](./.nvmrc).
+
+## Publishing
+
+A new version will automatically be published upon comitting to the `main` branch and pushing to the [bitbucket repository](https://bitbucket.org/hdnet/semantic-release-config/src/main/).
