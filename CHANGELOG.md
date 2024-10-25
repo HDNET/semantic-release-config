@@ -1,6 +1,18 @@
 # Changelog
 
 
+## [3.1.1](https://bitbucket.org/hdnet/semantic-release-config/compare/3.1.1%0D3.1.0) (2024-10-25)
+
+
+### Continuous Integration
+
+* Set correct registry ([54cb767](https://bitbucket.org/hdnet/semantic-release-config/commits/54cb767cbcf4c93506b375193ef00ba949deca9a))
+
+
+### Chore
+
+* **release:** 1.0.0 [skip ci] ([e973a26](https://bitbucket.org/hdnet/semantic-release-config/commits/e973a269b9b0deda0d0f9dfdcc5c0e3c86656c1f))
+
 ## 1.0.0 (2024-10-25)
 
 
